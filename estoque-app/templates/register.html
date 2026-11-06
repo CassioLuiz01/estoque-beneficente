@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Cadastro</title>
+</head>
+<body class="register-page">
+    {% include '_mensagens.html' %}
+    <h1>Cadastro</h1>
+    <form action="{{ url_for('register') }}" method="POST" class="cadastro-form">
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <label for="username" class="cadastro-label">Usuário:</label>
+        <input type="text" id="username" name="username" required class="cadastro-input">
+        
+        <label for="password" class="cadastro-label">Senha:</label>
+        <input type="password" id="password" name="password" required class="cadastro-input">
+        
+        <label for="full_name" class="cadastro-label">Nome Completo:</label>
+        <input type="text" id="full_name" name="full_name" required class="cadastro-input">
+        
+        <label for="email" class="cadastro-label">E-mail:</label>
+        <input type="email" id="email" name="email" required class="cadastro-input">
+        
+        <button type="submit" class="cadastro-button">Registrar</button>
+    </form>
+    <a href="{{ url_for('login') }}"><button class="cadastro-button">Já tem uma conta? Acessar.</button></a>
+</body>
+</html>

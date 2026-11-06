@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque Beneficente</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/variables.css') }}">
+</head>
+<body>
+    {% include '_mensagens.html' %}
+    <div class="colunaEsquerda">
+        <div class="imgCima"><img src="{{ url_for('custom_static', filename='imagem2.jpg') }}" alt="Imagem 2"></div>
+        <div class="imgBaixo"><img src="{{ url_for('custom_static', filename='Imagem1.jpeg') }}" alt="Imagem 1"></div>
+    </div>
+    <div class="colunaDireita">
+            <div class="quemSomos">
+                <h1>Quem somos</h1>
+                <p>Somos um grupo dedicado a criar uma solução online para gerenciar informações sobre o estoque de roupas de nosso projeto beneficente. Nosso objetivo é facilitar o acompanhamento e a organização das doações e distribuições de roupas dentro de nossa comunidade, promovendo uma abordagem eficiente e transparente.</p>
+            </div>
+    </div>
+</body>
+</html>

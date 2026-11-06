@@ -1,0 +1,11 @@
+:root{
+    --corDireita: #223D3C;
+    --corEsquerda: #F8F2F2;
+    --corTexto: #f8f8f8;
+    --corSelecao: #555;
+    --corBackgroundPar:#555;
+    --corBackgroundImpar:#f8f8f8;
+    --corBotao: #4CAF50;
+    --corBotao2: #388E3C;
+    --corBackgroundLogin: #DDEEEE;
+}

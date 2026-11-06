@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Gerenciar Estoque</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+</head>
+<body>
+    {% include '_mensagens.html' %}
+    <div class="gerenciar-estoque">
+        <h1>Gerenciar Estoque</h1>
+        <div class="table-container">
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Tamanho</th>
+                        <th>Gênero</th>
+                        <th>Quantidade</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                    <tr id="row_{{ item.id }}">
+                        <td>
+                            <span id="tipo_text_{{ item.id }}">{{ item.tipo }}</span>
+                            <input type="text" value="{{ item.tipo }}" id="tipo_input_{{ item.id }}" class="hidden-input">
+                        </td>
+                        <td>
+                            <span id="tamanho_text_{{ item.id }}">{{ item.tamanho }}</span>
+                            <input type="text" value="{{ item.tamanho }}" id="tamanho_input_{{ item.id }}" class="hidden-input">
+                        </td>
+                        <td>
+                            <span id="genero_text_{{ item.id }}">{{ item.genero }}</span>
+                            <input type="text" value="{{ item.genero }}" id="genero_input_{{ item.id }}" class="hidden-input">
+                        </td>
+                        <td>
+                            <span id="quant_text_{{ item.id }}">{{ item.quantidade }}</span>
+                            <input type="number" value="{{ item.quantidade }}" id="quant_input_{{ item.id }}" class="hidden-input">
+                        </td>
+                        <td>
+                            <button onclick="removeItem({{ item.id }})">Remover</button>
+                            <button id="edit_button_{{ item.id }}" onclick="editItem({{ item.id }})">Editar</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="button-group">
+            <a href="{{ url_for('index') }}"><button>Voltar para a Página Inicial</button></a>
+            <a href="{{ url_for('novo_estoque') }}"><button>Adicionar Novo Estoque</button></a>
+            <form action="{{ url_for('logout') }}" method="POST" style="display:inline;"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><button>Logout</button></form>
+        </div>
+    </div>
+    <!-- Inclusão dos scripts JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Novo Estoque</title>
+</head>
+<body class="novo-estoque-page">
+    {% include '_mensagens.html' %}
+    <div class="novo-estoque-container">
+        <h1>Adicionar Novo Item ao Estoque</h1>
+
+        {% if mensagem %}
+        <p>{{ mensagem }}</p>
+        {% endif %}
+        <form action="{{ url_for('novo_estoque') }}" method="POST">
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <div class="input-group">
+                <label class="novo-estoque-label" for="tipo">Tipo:</label>
+                <input class="novo-estoque-input" type="text" id="tipo" name="tipo" required>
+            </div>
+            <div class="input-group">
+                <label class="novo-estoque-label" for="tamanho">Tamanho:</label>
+                <input class="novo-estoque-input" type="text" id="tamanho" name="tamanho" required>
+            </div>
+            <div class="input-group">
+                <label class="novo-estoque-label" for="genero">Gênero:</label>
+                <input class="novo-estoque-input" type="text" id="genero" name="genero" required>
+            </div>
+            <div class="input-group">
+                <label class="novo-estoque-label" for="quantidade">Quantidade:</label>
+                <input class="novo-estoque-input" type="number" id="quantidade" name="quantidade" min="0" max="100000" required>
+            </div>
+            <button class="novo-estoque-button" type="submit">Adicionar</button>
+        </form>
+
+        <!-- Botão para ir manualmente para a página Gerenciar Estoque -->
+        <div class="novo-estoque-button-group">
+            <a href="{{ url_for('gerenciar_estoque') }}"><button class="novo-estoque-back-button">Ir para Gerenciar Estoque</button></a>
+            <a href="{{ url_for('index') }}"><button class="novo-estoque-back-button">Voltar para a Página Inicial</button></a>
+            <form action="{{ url_for('logout') }}" method="POST" style="display:inline;"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><button class="novo-estoque-back-button">Logout</button></form>
+        </div>
+    </div>
+</body>
+</html>

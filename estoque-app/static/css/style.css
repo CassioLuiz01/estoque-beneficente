@@ -1,0 +1,802 @@
+/* Estilos gerais */
+@import url('variables.css');
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    min-height: 100vh;
+    background-color: var(--corDireita);
+}
+
+.colunaEsquerda {
+    display: flex;
+    background-color: var(--corEsquerda);
+    flex-direction: column;
+    width: 58%;
+    height: 100vh;
+    align-items: center; 
+    justify-content: end;
+}
+
+.colunaDireita {
+    background-color: var(--corDireita);
+    color: var(--corTexto);
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 42%;
+    height: 100vh;
+}
+
+.imgCima img {
+    width: 55vh;
+    height: 40vh;
+}
+
+.imgBaixo img {
+    width: 105vh;
+    height: 50vh;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    margin-bottom: 7vh;
+}
+
+.menu-item {
+    background: none;
+    border: none;
+    color: var(--corTexto);
+    font-size: 4vh;
+}
+
+.menu-item:hover {
+    cursor: pointer;
+}
+
+#ola {
+    position: absolute;
+    right: 4vh;
+    font-size: 3vh;
+    color: var(--corTexto);
+}
+
+#logout {
+    position: absolute;
+    right: 1vh;
+    bottom: 2vh;
+    font-size: 1vh;
+    color: var(--corTexto);
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.botoes-estoque {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+.menu-item2 {
+    background: none;
+    border: none;
+    color: var(--corTexto);
+    font-size: 3vh;
+    text-decoration: none;
+}
+
+.menu-item2:hover {
+    cursor: pointer;
+}
+
+.linha {
+    width: 40vh;
+    border: 1px solid var(--corTexto)
+}
+
+#grossa {
+    width: 45vh;
+}
+
+.entradaDados {
+    margin-bottom: 20px;
+}
+
+.entradaDados label {
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+
+.entradaDados input[type="text"] {
+    width: 130%; 
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.entradaDados input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.quemSomos {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quemSomos h1 {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--corTexto);
+    border-bottom: 2px solid var(--corTexto);
+    padding-bottom: 10px; 
+}
+
+.quemSomos p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: var(--corTexto);
+}
+
+/* Estilos para a página HTML */
+
+.corBackground {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: var(--corDireita);
+    margin: auto;
+}
+
+.divTabela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75vh;
+    width: 180vh;
+    border-radius: 20px;
+    background-color: var(--corEsquerda);
+    padding-top: 20px;
+}
+
+/* Estilos para a tabela */
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela th,
+.tabela td {
+    padding: 10px;
+    border-top: 1px solid var(--corDireita);
+}
+
+.nomeEstoque {
+    margin: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    color: var(--corEsquerda);
+}
+
+#confirmar:hover {
+    cursor: pointer;
+}
+
+#confirmar {
+    margin-top: 10px;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--corEsquerda);
+    color: #000;
+}
+
+.alinharBotao {
+    width: 130%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+thead {
+    background-color: #ddd;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+#inputIndividual {
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.nomeInputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.gerenciar-estoque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-color: var(--corDireita);
+}
+
+.gerenciar-estoque h1 {
+    font-size: 3vh;
+    color: var(--corTexto);
+    margin-bottom: 20px;
+}
+
+.table-container {
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: var(--corEsquerda);
+    padding: 20px;
+    overflow-x: auto; /* Adicionado para permitir a rolagem horizontal */
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--corDireita);
+}
+
+.table-container th {
+    background-color: #ddd;
+}
+
+.table-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Adicionado para permitir a quebra de linha */
+}
+
+.button-group a button,
+.button-group form button,
+.table-container button {
+    background-color: var(--corBotao);
+    color: var(--corTexto);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2vh;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.button-group a button:hover,
+.button-group form button:hover,
+.table-container button:hover {
+    background-color: var(--corBotao);
+}
+
+.hidden-input {
+    display: none;
+}
+
+/* Estilo para a página de login */
+body.login-page {
+    background-color: var(--corBackgroundLogin); /* Cor de fundo da página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    background-color: var(--corDireita); /* Cor de fundo do formulário */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.login-container h1 {
+    color: #ffffff; /* Cor do texto do título */
+    margin-bottom: 20px;
+}
+
+.login-container .input-group {
+    margin-bottom: 15px;
+    margin-right: 15px;
+    position: relative;
+}
+
+.login-container .input-group i {
+    background-color: #ffa000; /* Cor de fundo dos ícones */
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container .input-group input {
+    width: calc(100% - 40px); /* Largura dos inputs */
+    padding: 10px;
+    padding-left: 40px; /* Adiciona espaço para o ícone */
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.login-container .input-group input[type="text"],
+.login-container .input-group input[type="password"] {
+    background-color: #ffffff; /* Cor de fundo dos inputs */
+}
+
+.login-container .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--corBotao); /* Cor do botão */
+    border: none;
+    border-radius: 5px;
+    color: #ffffff; /* Cor do texto do botão */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-container .btn:hover {
+    background-color: var(--corBotao2); /* Cor do botão ao passar o mouse */
+}
+
+.login-container a {
+    display: block;
+    margin-top: 20px;
+    color: #ffffff; /* Cor do link */
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para a página de recuperação de senha */
+body.forgot-password-page {
+    background-color: var(--corBackgroundLogin); /* Cor de fundo da página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.forgot-password-container {
+    background-color: var(--corDireita); /* Cor de fundo do formulário */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.forgot-password-container h1 {
+    color: #ffffff; /* Cor do texto do título */
+    margin-bottom: 20px;
+}
+
+.forgot-password-container .input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.forgot-password-container .input-group i {
+    background-color: #ffa000; /* Cor de fundo dos ícones */
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forgot-password-container .input-group input {
+    width: calc(100% - 40px); /* Largura dos inputs */
+    padding: 10px;
+    padding-left: 40px; /* Adiciona espaço para o ícone */
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.forgot-password-container .input-group input[type="email"] {
+    background-color: #ffffff; /* Cor de fundo dos inputs */
+}
+
+.forgot-password-container .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--corBotao); /* Cor do botão */
+    border: none;
+    border-radius: 5px;
+    color: #ffffff; /* Cor do texto do botão */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.forgot-password-container .btn:hover {
+    background-color: var(--corBotao2); /* Cor do botão ao passar o mouse */
+}
+
+.forgot-password-container a {
+    display: block;
+    margin-top: 20px;
+    color: #ffffff; /* Cor do link */
+    text-decoration: none;
+}
+
+.forgot-password-container a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para o formulário de cadastro */
+.cadastro-form {
+    width: 300px;
+    margin: 20px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: var(--corDireita);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.cadastro-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--corTexto);
+}
+
+.cadastro-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.cadastro-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--corBotao);
+    color: var(--corTexto);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cadastro-button:hover {
+    background-color: var(--corBotao2);
+}
+
+.cadastro-back-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+
+.cadastro-back-button:hover {
+    background-color: var(--corBotao);
+}
+
+/* Estilos para o corpo */
+body.register-page {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--corBackgroundLogin);
+}
+
+/* Estilos específicos para a página de edição de perfil */
+body.edit_profile_page {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.edit_profile_page h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.perfil-form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid var(--corTexto);
+    border-radius: 8px;
+    background-color: var(--corDireita);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--corTexto);
+}
+
+.perfil-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.perfil-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--corBotao);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.perfil-button:hover {
+    background-color: var(--corBotao2);
+}
+
+.perfil-back-button, .perfil-logout-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--corBotao);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+
+.perfil-back-button:hover, .perfil-logout-button:hover {
+    background-color: var(--corBotao);
+}
+
+.perfil-back-link, .perfil-logout-link {
+    text-decoration: none;
+}
+
+/* Estilos para a página de novo estoque */
+body.novo-estoque-page {
+    background-color: var(--corBackgroundLogin); /* Cor de fundo similar à página de cadastro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.novo-estoque-container {
+    width: 300px;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: var(--corDireita); /* Cor de fundo similar à página de cadastro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.novo-estoque-container h1 {
+    color: var(--corTexto); /* Cor do texto do título */
+    margin-bottom: 20px;
+}
+
+.novo-estoque-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff; /* Cor do texto */
+}
+
+.novo-estoque-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--corTexto);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.novo-estoque-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--corBotao); /* Cor do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.novo-estoque-button:hover {
+    background-color: var(--corBotao2); /* Cor do botão ao passar o mouse */
+}
+
+.novo-estoque-back-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--corBotao); /* Cor do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.novo-estoque-back-button:hover {
+    background-color: var(--corBotao2);
+}
+
+.novo-estoque-button-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Adicionar esta media query no final do seu arquivo CSS */
+
+@media (max-width: 768px) {
+    /* Ajustes gerais */
+    body {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--corDireita); /* Cor de fundo */
+    }
+
+    .colunaEsquerda, .colunaDireita {
+        width: 100%;
+        height: auto;
+    }
+
+    .imgCima img, .imgBaixo img {
+        display: none;
+    }
+
+    #ola {
+        font-size: 4vw;
+        text-align: center;
+        position: static;
+        margin: 20px 0;
+    }
+
+    #logout {
+        position: static;
+        margin: 20px 0;
+    }
+
+    .botoes {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .menu-item {
+        font-size: 4vw; /* Reduzir tamanho da fonte */
+    }
+
+    .linha, #grossa {
+        width: 80%;
+    }
+
+    .table-container {
+        overflow-x: auto; /* Adicionado para permitir a rolagem horizontal */
+    }
+
+    .table-container table {
+        min-width: 600px; /* Define a largura mínima da tabela */
+    }
+
+    .table-container th, .table-container td {
+        font-size: 3vw; /* Ajusta o tamanho da fonte para caber melhor na tela */
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para centralizar e reduzir o tamanho da mensagem de boas-vindas */
+    h1 {
+        font-size: 5vw; /* Reduz o tamanho da fonte */
+        text-align: center; /* Centraliza o texto */
+        margin: 20px 0; /* Adiciona margem acima e abaixo */
+    }
+}

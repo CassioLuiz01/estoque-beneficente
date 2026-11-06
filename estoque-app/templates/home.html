@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Bem-vindo ao Estoque Beneficente</title>
+</head>
+<body>
+    {% include '_mensagens.html' %}
+    <body>
+        <div class="colunaEsquerda">
+            <div class="imgCima"><img src="{{ url_for('custom_static', filename='imagem2.jpg') }}" alt="Imagem 2"></div>
+            <div class="imgBaixo"><img src="{{ url_for('custom_static', filename='Imagem1.jpeg') }}" alt="Imagem 1"></div>
+        </div>
+    
+    <div class="colunaDireita">
+        <h1>Bem-vindo ao Estoque Beneficente</h1>
+        <div class="botoes">
+            <a href="{{ url_for('login') }}"><button class="menu-item">Fazer Login</button></a>
+            <div class="linha"></div>
+            <a href="{{ url_for('register') }}"><button class="menu-item">Cadastre-se</button></a>
+            <div class="linha"></div>
+            <a href="{{ url_for('ajuda') }}"><button class="menu-item">Central de Ajuda</button></a>
+            <div class="linha"></div>
+            <a href="{{ url_for('quem_somos') }}"><button class="menu-item">Quem Somos</button></a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="login-page">
+    {% include '_mensagens.html' %}
+    <div class="login-container">
+        <h1>Estoque Beneficente</h1>
+        <form action="{{ url_for('login') }}" method="POST">
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="Usuário" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Senha" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <a href="{{ url_for('forgot_password') }}">Esqueceu sua senha?</a>
+        <a href="{{ url_for('index') }}">Voltar para a Página Inicial</a>
+        <a href="{{ url_for('register') }}">Registrar</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Acesso negado</title>
+</head>
+<body>
+    <h1>Acesso negado</h1>
+    <p>Você não tem permissão para acessar esta página.</p>
+    <a href="{{ url_for('home') }}"><button>Voltar para a Página Inicial</button></a>
+</body>
+</html>

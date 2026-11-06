@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Gerenciar Estoque</title>
+</head>
+<body>
+    {% include '_mensagens.html' %}
+    <h1>Gerenciar Estoque</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tipo</th>
+                <th>Tamanho</th>
+                <th>Gênero</th>
+                <th>Quantidade</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.tipo }}</td>
+                <td>{{ item.tamanho }}</td>
+                <td>{{ item.genero }}</td>
+                <td>{{ item.quantidade }}</td>
+                <td>
+                    <a href="{{ url_for('admin_edit_item', id=item.id) }}"><button>Editar</button></a>
+                    <form action="{{ url_for('admin_remove_item', id=item.id) }}" method="POST" style="display:inline;">
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                        <button type="submit">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('admin_dashboard') }}"><button>Voltar para Dashboard</button></a>
+</body>
+</html>
